@@ -1,6 +1,8 @@
 Introducing Environmental Variables in Two-Stage DEA and Conditional Efficiency Model with Test of the Separability Assumption
 =========================
 
+HackMd Link: https://hackmd.io/o3P9mzp8SleroDl1uD9fhQ?view
+
 [TOC]
 
 # 1. Introduction
@@ -115,21 +117,11 @@ we compare  two different sample sizes of data with different significance level
     - The pseudocode of two-stage DEA alogrithm is as follow, 
 ![](https://i.imgur.com/AhKbUAw.png)
 
-    - One can easily use the package `EfficiencyCalculator.py` to get the efficiency estimations.
-
-```
-cal = EfficiencyCalculator(x, y)
-cal.set_environmental_variables(z)
-cal.set_bandwidth(h=0.01)
-cal.set_kernel(kernel='triangular')
-cal.get_full_efficiency(dmu=6, conditional=True, method='VRS')
-cal.get_partial_efficiency(dmu=6, conditional=True, method='VRS')
-```
-
 - Results: estimated coverage of confidence intervals
 
     - We ran 100 Monte Carlo trials and compute the proportion among the 100 Monte Carlo experiments where the estimated confidence interval covers the true value of $\beta_0, \beta_1,$ and $\sigma_\varepsilon^2$ at different significance levels. The table below shows the proportion of esimated coverge of confidence intervals which provide valid inference.
-
+    - One can easily use the package `main.py` to conduct the Monte-Carlo experiment.
+    
 ![](https://i.imgur.com/GYUKpSr.png)
 
 <br>
